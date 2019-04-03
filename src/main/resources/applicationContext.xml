@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!--使用spring的bean来创建一个bean-->
+
+    <!--依赖注入的方式   设值注入 方式来配置bean属性  -->
+    <bean id="holleWorld" class="com.web.test.HolleWorld.HolleWorld">
+        <property name="name" value="Spring"/>
+     </bean>
+
+    <!-- 依赖注入的方式，构造器注入方式来配置bean属性
+    index = 位置
+    type = 参数类型
+    来区分重载的构造器
+    -->
+    <bean id="car" class="com.web.test.HolleWorld.Car">
+        <constructor-arg value="奔驰" ></constructor-arg>
+        <constructor-arg value="X5"></constructor-arg>
+    </bean>
+
+    <!-- 属性配置的细节-->
+    <bean id="carTwo" class="com.web.test.HolleWorld.Car">
+        <constructor-arg >
+            <value>宝马</value>
+        </constructor-arg>
+        <!--如果包含特殊字符 则使用<![CDATA[填入值]]>-->
+        <constructor-arg>
+            <value><![CDATA[<X360系列>^]]></value>
+        </constructor-arg>
+    </bean>
+
+    <!--init-method Bean的初始化方法 destroy-method Bean的销毁方法-->
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/usershiro"></property>
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="username" value="root"/>
+        <property name="password" value="123456"/>
+    </bean>
+
+
+
+
+
+</beans>
