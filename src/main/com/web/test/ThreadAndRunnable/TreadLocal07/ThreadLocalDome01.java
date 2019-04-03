@@ -32,7 +32,7 @@ public class ThreadLocalDome01 {
         new Thread(()->{
 
          t.tl.set(new Person());
-
+            System.out.println("dssd");
             System.out.println("t2 :"+t.tl.get());
         },"t2").start();
 
