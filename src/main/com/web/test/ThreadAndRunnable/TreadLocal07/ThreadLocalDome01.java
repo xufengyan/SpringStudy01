@@ -13,13 +13,9 @@ public class ThreadLocalDome01 {
      */
     static ThreadLocal<Person> tl=new ThreadLocal<>();
 
-
-
     public static void main(String [] args){
 
         ThreadLocalDome01 t=new ThreadLocalDome01();
-
-
 
         new Thread(()->{
 
@@ -30,7 +26,6 @@ public class ThreadLocalDome01 {
 
 
         new Thread(()->{
-
          t.tl.set(new Person());
             System.out.println("dssd");
             System.out.println("t2 :"+t.tl.get());
