@@ -1,4 +1,4 @@
-package com.web.test.ThreadAndRunnable.ReentrantLook05;
+package com.web.test.ThreadAndRunnable.手动锁ReentrantLook05;
 
 import java.util.LinkedList;
 

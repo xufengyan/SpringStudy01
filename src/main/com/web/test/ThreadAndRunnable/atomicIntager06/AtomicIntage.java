@@ -18,6 +18,7 @@ public class AtomicIntage {
             atomicInteger.incrementAndGet();//自加
         }
 
+
     }
 
 

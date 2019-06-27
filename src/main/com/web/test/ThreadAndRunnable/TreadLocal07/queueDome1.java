@@ -12,7 +12,7 @@ public class queueDome1 {
 
 
     /**
-     * 使用队列
+     * 使用队列 ---------------linkQueue链表实现的队列
      */
     static Queue<String> queueList=new ConcurrentLinkedDeque();
 
