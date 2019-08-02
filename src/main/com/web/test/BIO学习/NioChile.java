@@ -17,7 +17,7 @@ import java.util.Iterator;
  */
 public class NioChile {
 
-    private Selector selector;
+    private Selector selector;//事件驱动机制
 
     /**
      * 初始化通道
@@ -51,7 +51,7 @@ public class NioChile {
 
             while(true){
 
-                selector.select();
+                selector.select();//不断监听channel事件
 
                 //获取selector选中项的迭代器
                 Iterator ite = this.selector.selectedKeys().iterator();
@@ -139,7 +139,11 @@ public class NioChile {
         client.initChile("localhost",8000);
         client.listen();
 
+
+
     }
+
+
 
 
 

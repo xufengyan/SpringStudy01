@@ -1,4 +1,4 @@
-package com.web.test.java设计模式.责任链模式;
+package web.test.java设计模式.责任链模式;
 
 /**
  * Created by Administrator on 2019/4/24 0024.

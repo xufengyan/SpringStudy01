@@ -1,4 +1,4 @@
-package com.web.test.java设计模式.责任链模式;
+package web.test.java设计模式.责任链模式;
 
 /**
  * Created by Administrator on 2019/4/24 0024.
@@ -16,6 +16,7 @@ public class sensitiveFilter implements Filter{
 
     @Override
     public void doNewFilter(Request request, Response response,FilterChain chain) {
+
         request.RequestStr=request.RequestStr.replaceAll("敏感","")+"sensitive()";
         //         当处理完request请求后，调用doNewFilter，继续调用下一个方法对请求消息进行处理
         chain.doNewFilter(request,response,chain);

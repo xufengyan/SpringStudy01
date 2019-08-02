@@ -1,4 +1,4 @@
-package com.web.test.java设计模式.责任链模式;
+package web.test.java设计模式.责任链模式;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -37,7 +37,6 @@ public class FilterChain implements Filter{
            str =  filter.doFilter(str);
 
         }
-
         return str;
     }
 
@@ -54,7 +53,6 @@ public class FilterChain implements Filter{
         Filter f=list.get(index);
         index++;
         f.doNewFilter(request,response,chain);
-
 
     }
 }

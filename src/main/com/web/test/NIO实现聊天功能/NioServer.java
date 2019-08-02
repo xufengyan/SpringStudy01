@@ -83,8 +83,6 @@ public class NioServer {
                     //获取到客户端的socket；
                     ServerSocketChannel userSocket = (ServerSocketChannel) selectionKey.channel();
 
-
-
                     //获取与客户端的连接通道
                     SocketChannel socketChannel = userSocket.accept();
 
